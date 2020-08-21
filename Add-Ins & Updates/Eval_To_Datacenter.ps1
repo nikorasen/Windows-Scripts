@@ -1,0 +1,1 @@
+﻿DISM /Online /Set-Edition:ServerDatacenter /ProductKey:NBRD9-CY9HY-YWDR9-CBP4Y-R63D3 /AcceptEula
