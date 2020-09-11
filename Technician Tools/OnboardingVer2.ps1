@@ -475,6 +475,20 @@ Function UpdtCfg
     Install-Windowsupdate -acceptall -confirm:$false
     }
 #
+Function AddAlias
+    {
+    #This function adds custom commands set by the technican into each device's local command library
+    YesserNo = Test-Path C:\EWT\Scripts\Aliases\Elevate.psm1
+    if (YesserNo -eq $True)
+        {
+        mkdir "C:\Windows\System32\WindowsPowerShell\v1.0\Modules\Elevate"
+        copy-item -Path C:\EWT\Scripts\Aliases\Elevate.psm1 -Destination "C:\Windows\System32\WindowsPowerShell\v1.0\Modules\Elevate" -PassThru
+        }
+    if (YesserNo -eq $False)
+        {
+        Write-Host "EWT Script Folder Path not found. Please put all EWT onboarding installers and scripts under the path C:\EWT and run the onboarding script again."
+        }
+    }
 #Calls all the functions in order;
 Function Main
     {
@@ -492,6 +506,7 @@ Function Main
     Undertaker
     LokPriv
     RemGDrive
+    AddAlias
     UpdtCfg
     }
 Main
