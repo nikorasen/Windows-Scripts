@@ -6,4 +6,3 @@
 Get-Windowsupdate -microsoftupdate -ForceDownload -ForceInstall -acceptall -confirm:$false
 Download-WindowsUpdate -MicrosoftUpdate -AcceptAll -Confirm:$False
 Install-WindowsUpdate -MicrosoftUpdate -AcceptAll -AutoReboot -Confirm:$False
-shutdown /r
