@@ -1,0 +1,1 @@
+oscdimg.exe -h -m -o -u2 -udfver102 -bootdata:2#p0,e,bC:\W10EWTEDT\CX\CX-ISO-Files\boot\etfsboot.com#pEF,e,bC:\W10EWTEDT\CX\CX-ISO-Files\efi\microsoft\boot\efisys.bin C:\W10EWTEDT\CX\CX-ISO-Files C:\W10EWTEDT\CX\CX-ISO\W10Pro_EWTEDT_Def_v1A.iso
