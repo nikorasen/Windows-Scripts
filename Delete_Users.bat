@@ -1,0 +1,1 @@
+for /f %i in (userlist.txt) do dsquery user -name %i | dsrm -noprompt
