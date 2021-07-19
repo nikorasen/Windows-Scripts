@@ -1,0 +1,6 @@
+set-executionpolicy remotesigned -confirm:$false
+Install-Module -Name PSWindowsUpdate -Confirm:$False
+Import-Module -name PSWindowsUpdate
+Get-WindowsUpdate -microsoftupdate -AcceptAll -ForceDownload -ForceInstall 
+Download-WindowsUpdate -microsoftupdate -AcceptAll -ForceDownload -ForceInstall 
+Install-WindowsUpdate -microsoftupdate -acceptall -forcedownload -forceinstall -autoreboot -confirm:$false
